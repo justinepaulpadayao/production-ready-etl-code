@@ -10,6 +10,8 @@ awscli = "*"
 jupyter = "*"
 boto3 = "*"
 pyarrow = "*"
+configparser = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
