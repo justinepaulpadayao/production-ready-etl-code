@@ -51,7 +51,7 @@ try:
     print("Successfully written files to CSV format.", "\n")
     fp.close()
 
-except (Exception, Error) as error:
+except Exception as error:
     print("Error while connecting to PostgreSQL", error)
 
 finally:
@@ -73,5 +73,5 @@ s3 = boto3.client('s3',
 
 # Uploading to S3 bucket
 s3_file = local_filename
-s3.upload_file(local_filename, bucket_name, s3_file)
+s3.upload_file(s3_file, bucket_name, s3_file)
 print(f"Successfully uploaded {s3_file} into {bucket_name}.")
